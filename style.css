@@ -1,0 +1,168 @@
+:root {
+  --background: hsl(198, 97%, 11%);
+  --text-color: hsl(198, 61%, 88%);
+  --header-background: hsl(198, 97%, 1%);
+  --user-background: hsl(198, 97%, 30%);
+  --bullet-spacing: 12px;
+  --figure-width: clamp(450px, 30vw, 650px);
+  --storyboard-frame-dem: 291px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+html {
+  background: var(--background);
+  color: var(--text-color);
+  font-family: Roboto, Helvetica, sans-serif;
+  line-height: 1.3;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+header {
+  z-index: 10;
+  display: flex;
+  background: var(--header-background);
+  justify-content: flex-start;
+  padding: 0 15px;
+  top: 0;
+  position: sticky;
+}
+
+header h1 {
+  margin: 20px auto 20px 0;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+a {
+  color: var(--text-color);
+  text-align: center;
+}
+
+#introduction h4 {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  padding: 0 20px 0 20px
+}
+
+p {
+  max-width: 80ch;
+}
+
+#keyboard-diagram {
+  width: 75vw;
+  height: auto;
+  border: solid 10px var(--user-background);
+  border-radius: 15px;
+}
+
+#users {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#users > li {
+  background-color: var(--user-background);
+  flex: 1 1 250px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+#users h3, #users h4 {
+  text-align: center;
+  margin: 0;
+}
+
+#users h3 {
+  margin-bottom: 10px;
+}
+
+.notes > li {
+  margin-top: var(--bullet-spacing);
+}
+
+.responses > li {
+  margin-top: var(--bullet-spacing);
+}
+
+.question summary {
+  font-size: 1.2rem;
+}
+
+#personas .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#personas .container h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#personas .container figure {
+  max-width: var(--figure-width)
+}
+
+#personas .container img {
+  width: var(--figure-width);
+  border: solid 8px var(--user-background);
+  border-radius: 10px;
+}
+
+#board {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4vw;
+  justify-content: center;
+}
+
+#board li {
+  width: var(--storyboard-frame-dem);
+  overflow: hidden;
+  position: relative;
+}
+
+#board img {
+  object-fit: cover;
+  width: 440px;
+  height: var(--storyboard-frame-dem);
+  object-position: -6px -6px;
+}
+
+#board p {
+  margin-top: 0;
+}
+
+#board .background {
+  position: absolute;
+  top: 0;
+  width: var(--storyboard-frame-dem);
+  height: var(--storyboard-frame-dem);
+  border: solid 6px var(--user-background);
+}
